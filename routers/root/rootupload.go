@@ -6,9 +6,10 @@ import (
 	"mime/multipart"
 	"os"
 )
-import (
-	"../../common"
-)
+
+// import (
+// 	"../../common"
+// )
 
 import (
 	"github.com/astaxie/beego"
@@ -33,14 +34,14 @@ func (this *RootUploadRouter) Post() {
 	}
 
 	defer file.Close()
-	url, err := common.UploadFile("image", file)
-	if err != nil {
-		beego.Error(err)
-		fmt.Fprintf(this.Ctx.ResponseWriter, Script, num, common.Webconfig.StaticURL+"/"+url, err)
-	} else {
-		beego.Error(err)
-		fmt.Fprintf(this.Ctx.ResponseWriter, Script, num, common.Webconfig.StaticURL+"/"+url, "")
-	}
+	// url, err := common.UploadFile("image", file)
+	// if err != nil {
+	// 	beego.Error(err)
+	// 	fmt.Fprintf(this.Ctx.ResponseWriter, Script, num, common.Webconfig.StaticURL+"/"+url, err)
+	// } else {
+	// 	beego.Error(err)
+	// 	fmt.Fprintf(this.Ctx.ResponseWriter, Script, num, common.Webconfig.StaticURL+"/"+url, "")
+	// }
 	//	url, err := SaveFile("static/uploads", handler.Filename, file)//保存到本地
 	// if err != nil {
 	// 	fmt.Fprintf(this.Ctx.ResponseWriter, Script, num, common.Webconfig.SiteURL+"/"+url, err)
